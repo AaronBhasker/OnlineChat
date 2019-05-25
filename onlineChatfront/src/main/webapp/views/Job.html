@@ -1,0 +1,51 @@
+
+<div class="col-md-6 col-md-offset-3">
+ <h2>Add Jobs</h2>
+  <form name="form" ng-submit="addJob(vm.job)" role="form" method="post">
+  
+        
+        <div class="form-group" ng-class="{ 'has-error': form.jobtitle.$dirty && form.jobtitle.$error.required }">
+            <label for="jobtitle">Jobtitle </label>
+            <input type="text" name="jobtitle" id="jobtitle" class="form-control" ng-model="vm.job.jobtitle" required />
+            <span ng-show="form.jobtitle.$dirty && form.jobtitle.$error.required" class="help-block">Job title is required</span>
+        </div>
+        
+         
+        <div class="form-group" ng-class="{ 'has-error': form.skillsrequired.$dirty && form.skillsrequired.$error.required }">
+            <label for="skillsrequired">Skillsrequired </label>
+            <input type="text" name="skillsrequired" id="skillsrequired" class="form-control" ng-model="vm.job.skillsrequired" required />
+            <span ng-show="form.skillrequired.$dirty && form.skillsrequired.$error.required" class="help-block">skillsrequired is required</span>
+        </div>
+        
+        <div class="form-group" ng-class="{ 'has-error': form.salary.$dirty && form.salary.$error.required }">
+            <label for="salary">Salary </label>
+            <input type="text" name="salary" id="salary" class="form-control" ng-model="vm.job.salary" required />
+            <span ng-show="form.salary.$dirty && form.salary.$error.required" class="help-block">salary is required</span>
+        </div>
+        
+          <div class="form-group" ng-class="{ 'has-error': form.lastdate.$dirty && form.lastdate.$error.required }">
+            <label for="lastdate">lastdate </label>
+            <input type="text" name="lastdate" id="lastdate" class="form-control" ng-model="vm.job.lastdate" required />
+            <span ng-show="form.lastdate.$dirty && form.lastdate.$error.required" class="help-block">lastdate is required</span>
+        </div>
+        
+          <div class="form-group" ng-class="{ 'has-error': form.experience.$dirty && form.experience.$error.required }">
+            <label for="experience">Experience </label>
+            <input type="text" name="experience" id="experience" class="form-control" ng-model="vm.job.experience" required />
+            <span ng-show="form.experience.$dirty && form.experience.$error.required" class="help-block">experience is required</span>
+        </div>
+        
+          <div class="form-group" ng-class="{ 'has-error': form.qualification.$dirty && form.salary.$error.required }">
+            <label for="qualification">Qualification </label>
+            <input type="text" name="qualification" id="qualification" class="form-control" ng-model="vm.job.qualification" required />
+            <span ng-show="form.qualification.$dirty && form.qualification.$error.required" class="help-block">qualification is required</span>
+        </div>
+        
+            <div class="form-actions">
+            <button type="submit"  ng-disabled="form.$invalid || vm.dataLoading" class="btn btn-primary">Add Job</button>
+          
+            <a href="#/" class="btn btn-link">Cancel</a>
+        </div>
+       
+        </form>
+         </div>

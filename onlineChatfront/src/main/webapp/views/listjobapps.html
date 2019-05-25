@@ -1,0 +1,34 @@
+
+<table class="table">
+   
+    <tbody>
+      <div >
+      <ul ng-repeat="jobapp in allJobApps">
+       
+      <li > {{jobapp.user.name}}</li>
+      <li > {{jobapp.user.emailId }} </li>
+       <li > {{jobapp.appdate}} </li>
+        <li > {{jobapp.job.jobtitle}} </li>
+      
+           </ul>
+     	</div>
+    </tbody>
+  </table>
+  
+  <div class="container">
+  <h2>Job App List</h2>
+  <table class="table">
+   
+    <tbody>
+      <ul ng-repeat="jobapp in allJobApps">
+       <li > {{jobapp.user.name}}</li>
+      <li > {{jobapp.user.emailId}} </li>
+       <li > {{jobapp.appdate}} </li>
+        <li > {{jobapp.job.jobtitle}} </li>
+       
+      
+           </ul>
+     
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Pending Requests</title>
+
+  <div ng-repeat="requests in allrequests">
+  
+   <p><b>Name:</b>{{requests.fromId.name}}</p>
+    <p><b>EmailId:</b>{{requests.fromId.emailId}}</p>
+    <p><b>Mobile Number:</b>{{requests.fromId.mobilenumber}}</p>
+<button type="button" ng-click="acceptRequest(requests)">Accept</button> <button type="button" ng-click="rejectRequest(requests)">Reject</button>
+
+</div>
+</head>
+<body>
+
+</body>
+</html>

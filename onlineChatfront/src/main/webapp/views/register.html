@@ -1,0 +1,31 @@
+
+<div class="col-md-6 col-md-offset-3">
+    <h2>Register</h2>
+    <form name="form" ng-submit="register(vm.user)" role="form" method="post">
+        <div class="form-group" ng-class="{ 'has-error': form.emailid.$dirty && form.emailid.$error.required }">
+            <label for="emailid">Email Id</label>
+            <input type="text" name="emailid" id="emailid" class="form-control" ng-model="vm.user.emailId" required />
+            <span ng-show="form.emailid.$dirty && form.emailid.$error.required" class="help-block">Email id is required</span>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error': form.mobilenumber.$dirty && form.mobilenumber.$error.required }">
+            <label for="mobilenumber">Mobile number</label>
+            <input type="text" name="mobilenumber" id="Text1" class="form-control" ng-model="vm.user.mobilenumber" required />
+            <span ng-show="form.mobilenumber.$dirty && form.mobilenumber.$error.required" class="help-block">Mobile number is required</span>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error': form.name.$dirty && form.username.$error.required }">
+            <label for="name">name</label>
+            <input type="text" name="name" id="name" class="form-control" ng-model="vm.user.name" required />
+            <span ng-show="form.name.$dirty && form.name.$error.required" class="help-block">name is required</span>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error': form.password.$dirty && form.password.$error.required }">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" class="form-control" ng-model="vm.user.password" required />
+            <span ng-show="form.password.$dirty && form.password.$error.required" class="help-block">Password is required</span>
+        </div>
+        <div class="form-actions">
+            <button type="submit"  ng-disabled="form.$invalid || vm.dataLoading" class="btn btn-primary">Register</button>
+          
+            <a href="#/login" class="btn btn-link">Cancel</a>
+        </div>
+    </form>
+</div>

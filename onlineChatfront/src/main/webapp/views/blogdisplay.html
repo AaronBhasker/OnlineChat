@@ -1,0 +1,35 @@
+
+<table class="table">
+   
+    <tbody>
+      <ul>
+       
+      <li > Title:{{Blog.title}} </li>
+      <li > Description: {{Blog.description}} </li>
+       <li > PostedOn:{{Blog.postedon}} </li>
+       <li > PotedBy:{{Blog.user.emailId}} </li>
+           </ul>
+     
+    </tbody>
+  </table>
+
+<button ng-click="updateLikes(Blog.blogId)" class="btn btn-info btn-lg">
+          <span  class="glyphicon glyphicon-thumbs-up"></span>
+        </button>
+        <br/>
+Total {{Blog.likes}} likes for this blog
+<br/>
+<form  method="post">
+<textarea ng-model="commenttxt" rows="5" cols="50"></textarea>
+<br/>
+<input type="submit" ng-click="addBlogComment(Blog.blogId,commenttxt)" value="Post Comment" />
+
+</form>
+
+<div ng-repeat="blogcomment in blogcomments">
+Comment:{{blogcomment.commenttext}}
+<br/>
+Commented By:{{blogcomment.commentby.name}}
+<br/>
+Commented On:{{blogcomment.commentedon}}
+</div>

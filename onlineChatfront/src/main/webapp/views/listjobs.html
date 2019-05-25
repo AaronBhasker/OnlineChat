@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Jobs List</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Jobs List</h2>
+  
+    
+      <div ng-repeat="job in allJobs">
+       
+      <p><b>Job Title:</b>  {{job.jobtitle}}</p>
+        <p><b>Skills:</b> {{job.skillsrequired}}</p>
+         <p><b>Lastdate to apply:</b> {{job.lastdate}}</p>
+          <button type="button" ng-click="addJobApplication(job)">Click here to apply</button>
+          <button type="button" ng-click="listJobApplication(job)">View Applications</button>
+      <br/>
+      <br/>
+	</div>
+
+
+</body>
+</html>
